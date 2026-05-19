@@ -7,5 +7,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.bank.model.Transaction;
 
 public interface TransactionRepository extends MongoRepository<Transaction, String> {
-    List<Transaction> findByFromAccountOrToAccount(String from, String to);
+
+    List<Transaction> findByFromAccountOrToAccount(
+            String fromAccount,
+            String toAccount
+    );
 }
