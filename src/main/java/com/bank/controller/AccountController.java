@@ -7,6 +7,9 @@ import com.bank.service.AccountService;
 import com.bank.service.TransactionService;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.view.RedirectView;
+
 import java.util.List;
 
 @RestController
@@ -44,4 +47,31 @@ public class AccountController {
         transactionService.save(new Transaction(id, null, amount, TransactionType.WITHDRAW));
         return acc;
     }
-}`
+
+    @PostMapping("/create")
+    public RedirectView createAccount(String ownerName) {
+
+    accountService.createAccount(ownerName);
+
+    return new RedirectView("/accounts-page");
+    }
+
+    @PostMapping("/deposit")
+    public RedirectView depositForm(String accountId,
+                                    double amount) {
+
+        accountService.deposit(accountId, amount);
+
+        return new RedirectView("/accounts-page");
+    }
+
+    @PostMapping("/withdraw")
+    public RedirectView withdrawForm(String accountId,
+                                    double amount) {
+
+        accountService.withdraw(accountId, amount);
+
+        return new RedirectView("/accounts-page");
+    }
+
+}
