@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-C:\Users\Admin\Bank-System\src\main\java\com\bank\BankApplication.java
-=======
 C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\BankApplication.java
->>>>>>> 475c67622ae2409880929e6ad936c87e27dabe6c
+C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\model\Account.java
+C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\model\Transaction.java
+C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\model\TransactionType.java
+C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\repository\AccountRepository.java
+C:\Users\Admin\Desktop\Bank-System\src\main\java\com\bank\repository\TransactionRepository.java
